@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="footInput" placeholder="foot">
+<button id="meterConvert" onclick="inputFoot()">=</button><br>
+<textarea id="meterFoot" placeholder="meter"></textarea>
+<br>
+<hr>
+<input type="text" id="meterInput" placeholder="meter">
+<button id="footConvert" onclick="inputMeter()">=</button><br>
+<textarea id="footMeter" placeholder="foot"></textarea>
+<script>
+    function inputFoot() {
+        let foot = parseInt(document.getElementById('footInput').value);
+        function footToMeter(foot) {
+            return 0.305 * foot
+        }
+            document.getElementById('meterFoot').innerHTML = footToMeter(foot);
+        }
+
+    function inputMeter() {
+        let meter = parseInt(document.getElementById('meterInput').value);
+        function meterToFoot(meter) {
+            return 3.279 * meter
+        }
+            document.getElementById('footMeter').innerHTML = meterToFoot(meter);
+        }
+
+</script>
+</body>
+</html>
